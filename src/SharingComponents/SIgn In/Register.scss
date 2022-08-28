@@ -1,0 +1,50 @@
+.name__inp {
+  width: 100%;
+  justify-content: space-between;
+  input {
+    width: 220px;
+  }
+}
+.regi__btn {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: transform 700ms;
+}
+.regi__btn:hover {
+  background-color: rgb(0, 0, 0);
+  transform: scale(1.04);
+  box-shadow: 0px 2px 7px 0px #00f0a8;
+}
+input {
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+  border: 2px solid rgba(2, 50, 62, 0.158);
+  margin-bottom: 10px !important;
+}
+.checkbox {
+  width: 10%;
+}
+.check {
+  display: flex;
+  input {
+    width: 4%;
+  }
+}
+p {
+  margin: 5px !important;
+}
+.btn {
+  box-shadow: 0px 0px 0px 0px;
+  font-weight: 600;
+}
+.btn:hover {
+  background-color: white !important;
+  color: blue !important;
+}
+.inp__title {
+  color: black;
+  font-weight: 600;
+}

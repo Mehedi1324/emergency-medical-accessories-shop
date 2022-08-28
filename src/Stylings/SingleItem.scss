@@ -1,0 +1,84 @@
+.single__container {
+  background-image: linear-gradient(140deg, #29005f 28%, transparent 10%);
+  margin-bottom: 100px;
+  width: 100%;
+}
+.single__item {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+
+  padding-bottom: 100px !important;
+  margin: auto;
+  margin-bottom: 50px !important;
+  padding-top: 100px !important;
+
+  h4 {
+    color: rebeccapurple;
+    font-size: 30px;
+  }
+  h3 {
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 0px !important;
+  }
+  .radio__btn {
+    display: flex;
+    width: 70px;
+    .radio {
+      margin-right: 15px;
+      input {
+        width: 20px;
+        margin: 2px;
+        margin-right: 5px;
+      }
+      display: grid;
+      align-items: stretch;
+      grid-template-columns: repeat(4, 2fr);
+      .r1 {
+        accent-color: red;
+      }
+      .r2 {
+        accent-color: black;
+      }
+    }
+  }
+  .quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    p {
+      margin: 5px 20px !important;
+    }
+  }
+}
+.col__det {
+  padding-left: 3rem;
+}
+.card__btn {
+  width: 150px;
+  input {
+    border-radius: 5px;
+    background-color: rgb(7, 132, 132);
+    color: white;
+    transition: 300ms all;
+    font-weight: 500;
+  }
+  input:hover {
+    transform: scale(1.07);
+    background-color: #29005f;
+  }
+}
+.product__img {
+  max-width: 400px;
+  margin-bottom: 20px !important;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 5px 0px 8px 5px rgba(140, 140, 140, 0.788);
+  img {
+    border-radius: 10px;
+  }
+}

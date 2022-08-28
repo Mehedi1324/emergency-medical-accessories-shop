@@ -1,0 +1,96 @@
+// New Arrivals
+
+[
+  {
+    "name": "Blood Pressure Monitor",
+    "price": 84.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_7_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+  {
+    "name": "Surgical Gloves",
+    "price": 24.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_2_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+  {
+    "name": "Medical Mask",
+    "price": 154.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_1_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+  {
+    "name": "Digital Medical Thermometer",
+    "price": 64.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1.jpg",
+    "rate": 5,
+    "available": "In stock"
+  }
+]
+
+
+// Feature product________________
+
+
+
+[
+  {
+    "name": "Oxygen Mask",
+    "price": 64.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_4_.jpg",
+    "rate": 4,
+    "available": "In stock"
+  },
+  {
+    "name": "Electric Bone Saw",
+    "price": 154.0,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_5_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+  {
+    "name": "Blood Pressure Monitor",
+    "price":84.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_3_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+  {
+    "name": "Dental Self Aspirating Syringe",
+    "price": 24.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_6_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+  {
+    "name": "Vaginal Speculum",
+    "price": 64.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_8_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+  {
+    "name": "Inhaler",
+    "price": 14.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_9_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+  {
+    "name": "Anesthesia Facemask",
+    "price":24.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_10_.jpg",
+    "rate": 4,
+    "available": "In stock"
+  },
+  {
+    "name": "Proctoscope",
+    "price": 84.00,
+    "image": "https://claue.arrowtheme.com/media/catalog/product/cache/ffb5bc40886738c665eef41baa1f2a0c/d/i/digital_medical_thermometer.h03_1_11_.jpg",
+    "rate": 5,
+    "available": "In stock"
+  },
+]

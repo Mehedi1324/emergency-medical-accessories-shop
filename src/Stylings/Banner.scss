@@ -1,0 +1,131 @@
+.carousel {
+  background-image: url('../../public/images/bg.jpg');
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-position: cover;
+  overflow: hidden;
+  .bnr__info {
+    margin-top: 20%;
+    margin-left: 10%;
+    p {
+      margin-top: 20px !important;
+      font-weight: 500;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+    mask-size: cover;
+
+    z-index: -100;
+  }
+  .cnter {
+    position: relative;
+    z-index: 0;
+  }
+  .cnt {
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
+    display: flex;
+    font-weight: 500;
+    padding: 10px 20px;
+    box-shadow: 4px 6px 6px -5px black;
+    img {
+      width: 30px;
+    }
+  }
+
+  .t1 {
+    left: 45%;
+    top: 10%;
+  }
+  .t2 {
+    top: 50%;
+    right: 10%;
+  }
+  .t3 {
+    bottom: 30%;
+    right: 40%;
+  }
+  .doc_img {
+    width: 68%;
+  }
+  .slider {
+    height: 629px;
+    P {
+      margin-top: 7%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .slider {
+    height: 400px !important;
+  }
+  .doc_img {
+    width: 100% !important;
+  }
+  .cnt {
+    font-size: 12px;
+    padding: 5px 10px !important;
+  }
+  .t2 {
+    top: 60% !important;
+    right: 30% !important;
+  }
+  .t3 {
+    right: 0 !important;
+    bottom: 55% !important;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0px !important;
+  margin-right: 15%;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+  list-style: none;
+  opacity: 0;
+}
+@media only screen and (max-width: 900px) and(min-width:660px) {
+  .doc_img {
+    width: 70% !important;
+  }
+  .t1 {
+    left: 45% !important;
+  }
+  .t3 {
+    right: 10% !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .t1 {
+    left: 45% !important;
+    top: 20% !important;
+  }
+  .t2 {
+    right: 0px !important;
+    top: 40% !important;
+  }
+  .t3 {
+    bottom: 30% !important;
+    right: 25% !important;
+  }
+}
+@media only screen and (max-width: 1250px) and(min-width:900px) {
+  .doc_img {
+    width: 72% !important;
+  }
+  .slider {
+    height: 600px !important;
+  }
+}

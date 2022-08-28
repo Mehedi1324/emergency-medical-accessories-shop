@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Components/Home';
+import Footer from './SharingComponents/HeaderFooter/Footer';
+import Header from './SharingComponents/HeaderFooter/Header';
+import AuthProvider from './SharingComponents/Hooks/AuthProvider';
+import SingleItem from './Components/SingleItem';
 
+import Error from './Components/Error';
+import Contact from './Components/Contact';
+import Card from './Components/Card';
+import Order from './Components/Order';
+import PrivateRoute from './Components/PrivateRoute';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AuthProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<SingleItem />} />
+          <Route path="/card" element={<Card />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/order"
+            element={
+              // <PrivateRoute>
+              <Order />
+              // </PrivateRoute>
+            }
+          />
+          <Route path="*" element={<Error />} />
+        </Routes>
+
+        <Footer />
+      </AuthProvider>
+    </Router>
   );
 }
 

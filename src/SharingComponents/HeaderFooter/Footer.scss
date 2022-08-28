@@ -1,0 +1,64 @@
+.social__icons svg {
+  width: 40px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.footer__container {
+  width: 90%;
+  overflow: hidden;
+  margin: auto !important;
+  margin-left: 7% !important;
+}
+.social__icons svg:hover {
+  color: blue;
+  transition-duration: 400ms;
+}
+.category {
+  margin-bottom: 40px;
+}
+.category a {
+  font-size: 16px;
+  color: rgb(82, 82, 82) !important;
+  font-weight: 400;
+}
+.category a:hover {
+  color: blue !important;
+}
+.add__svg {
+  width: 20px;
+  font-size: 20px;
+  margin-right: 12px;
+  color: rgb(101, 101, 101);
+}
+.address {
+  align-items: center;
+  margin-bottom: 10px;
+}
+.add_dit1 {
+  font-size: 14px;
+  color: rgb(101, 101, 101);
+}
+.logo {
+  text-align: center;
+  margin-top: 25px !important;
+  margin-bottom: 35px !important ;
+  margin-left: -5% !important;
+}
+.logo img {
+  width: 250px;
+}
+.bottom {
+  background-color: #f6f6f8;
+}
+
+.bottom__elements {
+  width: 90%;
+  margin: auto;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom__elements p {
+  font-size: 14px;
+}

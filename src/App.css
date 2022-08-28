@@ -1,10 +1,58 @@
 .App {
   text-align: center;
 }
-
+img {
+  width: 100%;
+  height: auto;
+}
+h2 {
+  font-size: 25px;
+  color: #494b4f !important;
+}
+h3 {
+  font-size: 18px;
+  color: #494b4f !important;
+}
+h5 {
+  font-size: 16px;
+  color: #494b4f !important;
+}
+body {
+  color: #616979 !important;
+  scroll-behavior: smooth !important;
+}
+div#root {
+  overflow: hidden;
+}
+p {
+  font-size: 16px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+button {
+  background-color: red;
+  color: white;
+  font-size: 16px !important;
+  font-weight: 500;
+  border-radius: 50px !important;
+  padding: 6px 22px;
+  border: chocolate;
+  transition: transform 400ms;
+  box-shadow: 0px 2px 3px 0px #0035f3;
+}
+button:hover {
+  background-color: #616979;
+  transform: scale(1.1);
+}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+a:hover {
+  color: blue !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {

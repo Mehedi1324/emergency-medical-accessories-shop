@@ -1,0 +1,21 @@
+.medical__walker {
+  width: 80%;
+  overflow: hidden;
+  .col2 {
+    display: flex;
+    align-items: center;
+  }
+  .p1 {
+    color: #616979 !important;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .p2 {
+    padding-right: 3%;
+  }
+  .previous__price {
+    margin-left: 13%;
+    margin-top: -6%;
+    text-decoration: line-through;
+  }
+}

@@ -1,0 +1,152 @@
+header {
+  z-index: 8 !important;
+}
+.d-flex {
+  display: flex !important;
+  align-items: center;
+}
+
+.cnt__icon {
+  margin-right: 8px;
+  font-size: 14px !important;
+}
+.log__icon {
+  font-size: 22px !important;
+  padding: 1px !important;
+  color: black;
+  transition: 1000ms all;
+}
+
+.log__icon:hover {
+  cursor: pointer;
+}
+
+svg {
+  vertical-align: middle;
+  width: auto;
+}
+.social__icons {
+  padding-top: 18px !important;
+}
+.cart__lnt {
+  font-weight: 600;
+  margin-left: 3px;
+  border-radius: 50%;
+}
+
+.navbar {
+  background-image: url('../../../public/images/bg.jpg');
+  padding: 0px !important;
+}
+.navbar.active {
+  position: fixed;
+  top: 0;
+  z-index: 1111;
+  width: 100%;
+  box-shadow: 0px 0px 10px 2px;
+  background-color: white !important;
+}
+
+.nav__logo {
+  width: 150px !important;
+  img {
+    width: 100px;
+    margin-top: -12px;
+    margin-left: 15px;
+  }
+}
+.drop__container {
+  position: relative !important;
+  padding: 2px;
+}
+.drop__content {
+  position: absolute !important;
+  top: 30px;
+  right: -97%;
+  box-shadow: -5px 9px 5px -5px #0000007d;
+  display: none;
+  padding-top: 14px;
+
+  width: 180px;
+
+  border-radius: 5px;
+  z-index: 1000;
+  background-color: #f0f9ff;
+}
+.drop__container:hover .drop__content {
+  display: block;
+}
+
+.drop__content a {
+  color: black !important;
+  font-size: 16px;
+}
+.drop__content a:hover {
+  font-weight: 600;
+}
+.dp {
+  width: 60px;
+  border-radius: 50%;
+  margin-bottom: 0px;
+}
+.nav__list {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+  margin: 0;
+}
+.nav__list li:hover {
+  background-color: rgb(5, 224, 244);
+  cursor: pointer;
+}
+.nav__list li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  line-height: 16px;
+  border-bottom: 2px solid #d5cbcbcc;
+}
+
+.profile {
+  border-bottom: 1px solid gray;
+}
+.outlet_btn {
+  border-radius: 20px !important;
+}
+.offcanvas-start {
+  top: 0;
+  right: 0 !important;
+  width: 400px;
+  border-right: 1px solidrgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+}
+.sign__out {
+  color: black !important;
+}
+.sign__out:hover {
+  font-weight: 500;
+}
+.sidebar {
+  z-index: 111111111111111 !important;
+}
+
+// Mini Card__________
+.mini__btn {
+  input {
+    border-radius: 5px;
+    background-color: rgb(7, 132, 132);
+    color: white;
+    transition: 300ms all;
+    font-weight: 500;
+  }
+  input:hover {
+    transform: scale(1.01);
+    background-color: #29005f;
+  }
+}
+.mini__total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  margin-bottom: 30px;
+}
