@@ -20,10 +20,23 @@ import Register from '../SIgn In/Register';
 import { useAuth } from '../Hooks/AuthProvider';
 import { MdDelete } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart, deleteFromCart } from '../../actions/cartAction';
+import Rating from '../../Components/Rating';
 // framer motion
 
 const Header = () => {
   const [isHover, toggleHover] = React.useState(false);
+  // Getting product from redux
+
+  const dispatch = useDispatch();
+  const cartState = useSelector((state) => state.cartReducer);
+  const cartItems = cartState.cartItems;
+  const subTotal = cartItems.reduce(
+    (x, item) => x + item.price * item.quantity,
+    0
+  );
+  // __________
   const toggleHoverMenu = () => {
     toggleHover(!isHover);
   };
@@ -153,58 +166,61 @@ const Header = () => {
               placement="end"
             >
               <div>
-                <Offcanvas.Header closeButton>
-                  <Offcanvas.Title
-                    style={{
-                      margin: 'auto',
-                      borderBottom: '2px solid gray',
-                    }}
-                  >
-                    {' '}
-                    <h3
-                      style={{
-                        fontWeight: '700',
-                        marginTop: '10px',
-                        color: '#29005f',
-                      }}
-                    >
-                      {' '}
-                      Mini Card{' '}
-                    </h3>
+                <Offcanvas.Header>
+                  <Offcanvas.Title>
+                    <div className="mini__btn">
+                      <div className="total">
+                        <h2>Total: </h2>
+                        <h2>{subTotal} </h2>
+                      </div>
+                      <a href="/card">
+                        <input type="submit" value="View Cart" />
+                      </a>
+                      <a href="/order">
+                        <input type="submit" value="Order Now" />
+                      </a>
+                    </div>
                   </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body>
-                  <div className="booked__place">
-                    <div className="place__info">
-                      <img src="./image/imagination3.png" alt="" />
-                      <div>
-                        <h6>Title</h6>
-                        <p>Rating</p>
-                        <p>Price</p>
+                <Offcanvas.Body className="canvas">
+                  {cartItems.map((item) => (
+                    <div>
+                      <div className="mini__cart">
+                        <div className="minicart__info">
+                          <div>
+                            <img src={item.image} alt="" />
+                          </div>
+
+                          <div className="cart__name">
+                            <h6>{item.name}</h6>
+                            <div className="rating">
+                              <Rating item={item} key={item.name} />
+                            </div>
+                            <p>$ {item.price * item.quantity}</p>
+                          </div>
+                        </div>
+
+                        <div className="quantity">
+                          <FaMinus
+                            onClick={() =>
+                              dispatch(addToCart(item, item.quantity - 1))
+                            }
+                          />
+                          <span style={{ margin: '5px' }}>{item.quantity}</span>
+                          <FaPlus
+                            onClick={() =>
+                              dispatch(addToCart(item, item.quantity + 1))
+                            }
+                          />
+                        </div>
+                        <div className="delete">
+                          <MdDelete
+                            onClick={() => dispatch(deleteFromCart(item))}
+                          />
+                        </div>
                       </div>
                     </div>
-
-                    <div className="quantity">
-                      <FaMinus />
-                      <input value="1" />
-                      <FaPlus />
-                    </div>
-                    <div className="delete">
-                      <MdDelete />
-                    </div>
-                  </div>
-                  <div className="mini__total">
-                    <h3>Total :</h3>
-                    <h3>$ 100</h3>
-                  </div>
-                  <div className="mini__btn">
-                    <a href="/card">
-                      <input type="button" value="View Card" />
-                    </a>
-                    <a href="/order">
-                      <input type="button" value="Order Now" />
-                    </a>
-                  </div>
+                  ))}
                 </Offcanvas.Body>
               </div>
             </Offcanvas>
@@ -212,7 +228,7 @@ const Header = () => {
 
           {/* __________________ */}
 
-          <p className="cart__lnt me-3"> 10</p>
+          <p className="cart__lnt me-1"> {cartItems.length}</p>
         </div>
       </nav>
     </div>

@@ -13,7 +13,7 @@ const Blogs = () => {
         </p>
       </div>
       <Row>
-        <Col md={6} lg={4} sm={12} data-aos="fade-down" data-aos-delay="700">
+        <Col md={6} lg={4} sm={12} data-aos="fade-down">
           <div className="col">
             <img src="./images/child.jpg" alt="" />
             <div className="b__detail">

@@ -29,9 +29,18 @@ svg {
   padding-top: 18px !important;
 }
 .cart__lnt {
-  font-weight: 600;
   margin-left: 3px;
+  font-weight: 600;
+  margin-top: -15px !important;
+  margin-left: -8px !important;
+  background-color: black;
+  color: white;
+  width: 20px;
+
+  height: 20px;
+  font-size: 14px;
   border-radius: 50%;
+  text-align: center;
 }
 
 .navbar {
@@ -113,12 +122,34 @@ svg {
 .outlet_btn {
   border-radius: 20px !important;
 }
-.offcanvas-start {
-  top: 0;
-  right: 0 !important;
-  width: 400px;
-  border-right: 1px solidrgba(0, 0, 0, 0.2);
-  transform: translateX(-100%);
+.offcanvas-header {
+  padding: 0rem 0rem !important;
+}
+.offcanvas-header {
+  width: 100% !important;
+  border-bottom: 2px solid;
+}
+.offcanvas-title {
+  margin: auto !important;
+  width: 90% !important;
+
+  padding: 10px 0px;
+  .mini__btn {
+    input {
+      width: 40%;
+      font-size: 16px;
+      margin: 15px;
+      background-color: blueviolet;
+      color: white;
+      border-radius: 5px;
+      transition: 400ms all;
+      box-shadow: 0px 5px 5px -3px black;
+    }
+    input:hover {
+      background-color: rgb(94, 12, 171);
+      transform: scale(1.03);
+    }
+  }
 }
 .sign__out {
   color: black !important;
@@ -131,22 +162,42 @@ svg {
 }
 
 // Mini Card__________
-.mini__btn {
-  input {
-    border-radius: 5px;
-    background-color: rgb(7, 132, 132);
-    color: white;
-    transition: 300ms all;
-    font-weight: 500;
+.mini__cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 0px 10px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  .rating {
+    margin-top: -5px;
+    margin-bottom: 10px;
   }
-  input:hover {
-    transform: scale(1.01);
-    background-color: #29005f;
+  .minicart__info {
+    display: flex;
+    align-items: center;
+    .cart__name {
+      line-height: 10px;
+      h6 {
+        width: 110px;
+      }
+    }
+    p {
+      width: 100px;
+    }
+    display: flex;
+    img {
+      width: 110px;
+    }
   }
 }
-.mini__total {
+
+.canvas {
+  margin-top: 1px solid black;
+  height: 80% !important;
+  background-color: rgb(255, 254, 254);
+}
+.total {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0px;
-  margin-bottom: 30px;
 }

@@ -11,6 +11,7 @@ import Contact from './Components/Contact';
 import Card from './Components/Card';
 import Order from './Components/Order';
 import PrivateRoute from './Components/PrivateRoute';
+import Congratulation from './Components/Congratulation';
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/product/:id" element={<SingleItem />} />
           <Route path="/card" element={<Card />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/order-placed" element={<Congratulation />} />
           <Route
             path="/order"
             element={

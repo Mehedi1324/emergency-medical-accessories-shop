@@ -20,6 +20,10 @@ const Banner = () => {
                   Save up to 10% on Lusion brand purchases. Free delivery and
                   easy payment.{' '}
                 </p>
+                <a href="#newArrival">
+                  {' '}
+                  <button className="add__btn my-5">Shop Now </button>
+                </a>
               </div>
             </Col>
             <Col md={6} lg={6} sm={6} xs={6}>
@@ -54,6 +58,10 @@ const Banner = () => {
                   Save up to 10% on Lusion brand purchases. Free delivery and
                   easy payment.{' '}
                 </p>
+                <a href="#newArrival">
+                  {' '}
+                  <button className="add__btn my-5">Shop Now </button>
+                </a>
               </div>
             </Col>
             <Col md={6} lg={6} sm={6} xs={6}>
@@ -88,6 +96,10 @@ const Banner = () => {
                   Save up to 10% on Lusion brand purchases. Free delivery and
                   easy payment.{' '}
                 </p>
+                <a href="#newArrival">
+                  {' '}
+                  <button className="add__btn my-5">Shop Now </button>
+                </a>
               </div>
             </Col>
             <Col md={6} lg={6} sm={6} xs={6}>

@@ -17,7 +17,7 @@ const Home = () => {
       <Advertising />
       <FeatureProducts />
       <Blogs />
-      <InstagramCollections />
+      {/* <InstagramCollections /> */}
       <Supports />
     </div>
   );

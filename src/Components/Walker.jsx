@@ -9,7 +9,7 @@ const Walker = () => {
         <Col md={6} lg={6} sm={12} data-aos="fade-right">
           <img src="./images/walker.jpg" alt="" />
         </Col>
-        <Col className="col2" md={6} lg={6} sm={12} data-aos="fade-left">
+        <Col className="col2 pb-5" md={6} lg={6} sm={12} data-aos="fade-left">
           <div>
             <h3> DRIVE MEDICAL WALKER</h3>
             <p className="p1"> $ {price}</p>
@@ -19,9 +19,10 @@ const Walker = () => {
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer
             </p>
-            <button data-aos="zoom-in" className="add__btn">
-              Check Our Collections{' '}
-            </button>
+            <a href="#fiatureProduct">
+              {' '}
+              <button className="add__btn">Check Our Collections </button>
+            </a>
           </div>
         </Col>
       </Row>

@@ -1,7 +1,6 @@
 // Booking______________
 .card {
   width: 90%;
-  overflow: hidden;
   margin-top: 40px !important;
   margin-bottom: 100px !important;
   margin: auto;
@@ -10,33 +9,35 @@
 .booked__place {
   display: flex;
   justify-content: space-between;
+
   align-items: center;
-  border-bottom: 1px solid rgba(175, 175, 175, 0.458);
-  padding: 20px 10px;
-  .place__info {
+  box-shadow: 0px 0px 22px -7px grey;
+  padding: 20px 20px;
+  margin: 15px 0px !important;
+  background-color: #eaeaea1f;
+  border-radius: 10px;
+  .info__cart {
     display: flex;
-    img {
-      width: 80px;
-      height: 80px;
-      margin-right: 20px;
-    }
-    p {
-      margin: 0px;
-    }
+    align-items: center;
+    width: 40%;
+  }
+  img {
+    width: 112px;
   }
   .quantity {
-    input {
-      width: 40px;
-      background: none;
-      border: none;
-      text-align: center;
-    }
-    input:focus {
-      outline: none !important;
+    svg {
+      margin: 10px;
     }
   }
 }
-
+svg:hover {
+  cursor: pointer;
+}
+.delete {
+  svg {
+    font-size: 25px;
+  }
+}
 // Total Cost
 
 .form__row {
@@ -46,6 +47,7 @@
   border-radius: 10px;
   margin-bottom: 30px !important;
   margin: auto;
+
   h5 {
     font-size: 20px !important;
     font-weight: 600;

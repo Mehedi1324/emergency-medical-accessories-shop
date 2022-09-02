@@ -5,12 +5,12 @@ import FeProduct from './FeProduct';
 const FeatureProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:1010/feature')
+    fetch('https://safe-oasis-53862.herokuapp.com/feature')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
   return (
-    <div className="container">
+    <div className="container" id="fiatureProduct">
       <div className="title">
         <h2 data-aos="zoom-in">FEARTURE PRODUCT</h2>
         <p data-aos="zoom-in">

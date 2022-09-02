@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import AddingProduct from '../SharingComponents/Cart/AddingProduct';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../actions/cartAction';
 import '../Stylings/Product.scss';
 const FeProduct = (props) => {
   const { name, image, price } = props.product;
-  const { handleAddtoCart } = AddingProduct();
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addToCart(props.product, quantity));
+  };
   return (
     <Col md={4} lg={3} sm={6} xs={6}>
       <div className="product__container">
@@ -16,10 +21,7 @@ const FeProduct = (props) => {
               <button className="hov__icon">View Product</button>
             </Link>
 
-            <button
-              onClick={() => handleAddtoCart(props.product)}
-              className="hov__icon"
-            >
+            <button onClick={handleAddToCart} className="hov__icon">
               Add to card
             </button>
           </div>

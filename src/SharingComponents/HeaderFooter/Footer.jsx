@@ -15,17 +15,10 @@ import {
 const Footer = () => {
   return (
     <div>
-      <div className="footer__container">
+      <div className="footer__container" data-aos="fade-down">
         <div>
           <Row className="row">
-            <Col
-              lg={3}
-              md={6}
-              sm={6}
-              xs={12}
-              data-aos="fade-up-left"
-              data-aos-delay="100"
-            >
+            <Col lg={3} md={6} sm={6} xs={12}>
               <div className="column">
                 <div className="category">
                   <h4>Address</h4>
@@ -53,15 +46,7 @@ const Footer = () => {
                 </div>
               </div>
             </Col>
-            <Col
-              className="category"
-              lg={3}
-              md={6}
-              sm={6}
-              xs={12}
-              data-aos="fade-up-left"
-              data-aos-delay="200"
-            >
+            <Col className="category" lg={3} md={6} sm={6} xs={12}>
               <h4>Categories</h4>
               <Link to="#">Emergency Kits</Link>
               <br />
@@ -72,15 +57,7 @@ const Footer = () => {
               <Link to="#">essential stuff</Link>
               <br />
             </Col>
-            <Col
-              className="category"
-              lg={3}
-              md={6}
-              sm={6}
-              xs={12}
-              data-aos="fade-up-left"
-              data-aos-delay="300"
-            >
+            <Col className="category" lg={3} md={6} sm={6} xs={12}>
               <h4>Information</h4>
               <Link to="#">About Us</Link>
               <br />
@@ -93,15 +70,7 @@ const Footer = () => {
               <Link to="#">Privacy Policy</Link>
               <br />
             </Col>
-            <Col
-              className="category "
-              lg={3}
-              md={6}
-              sm={6}
-              xs={12}
-              data-aos="fade-up-left"
-              data-aos-delay="400"
-            >
+            <Col className="category " lg={3} md={6} sm={6} xs={12}>
               <h4>Quick Links</h4>
               <Link to="#">Store Location</Link>
               <br />

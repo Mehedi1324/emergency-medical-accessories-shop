@@ -8,12 +8,12 @@ import '../Stylings/NewArrivals.scss';
 const NewArrivals = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:1010/latest')
+    fetch('https://safe-oasis-53862.herokuapp.com/latest')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
   return (
-    <div className="container">
+    <div className="container" id="newArrival">
       <div className="title">
         <div className="d-flex">
           <h2 data-aos="zoom-in">NEW ARRIVALS</h2>

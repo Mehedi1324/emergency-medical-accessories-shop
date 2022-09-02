@@ -2,12 +2,17 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import { FaSearchPlus, FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import AddingProduct from '../SharingComponents/Cart/AddingProduct';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../actions/cartAction';
 import '../Stylings/Product.scss';
+import { useState } from 'react';
 const NProduct = (props) => {
+  const [quantity, setQuantity] = useState(1);
   const { image, price, name } = props.product;
-  const { handleAddtoCart } = AddingProduct();
-
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addToCart(props.product, quantity));
+  };
   return (
     <Col md={4} lg={3} sm={6} xs={6}>
       <div className="product__container">
@@ -18,10 +23,7 @@ const NProduct = (props) => {
               <button className="hov__icon">View Product</button>
             </Link>
 
-            <button
-              onClick={() => handleAddtoCart(props.product)}
-              className="hov__icon"
-            >
+            <button onClick={handleAddToCart} className="hov__icon">
               Add to card
             </button>
           </div>

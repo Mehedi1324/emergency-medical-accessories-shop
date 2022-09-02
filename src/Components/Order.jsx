@@ -1,7 +1,26 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import '../Stylings/Order.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Order = () => {
+  const [coupon, setCoupon] = useState('');
+  const couponHandler = () => {
+    setCoupon('sorry this function is not avail able right now');
+  };
+  const dispatch = useDispatch();
+  const cartState = useSelector((state) => state.cartReducer);
+  const cartItems = cartState.cartItems;
+  console.log(cartItems.quantity);
+  const subTotal = cartItems.reduce(
+    (x, item) => x + item.price * item.quantity,
+    0
+  );
+  const vat = parseFloat((subTotal * 0.1).toFixed(2));
+  const finalTotal = subTotal + vat;
+  const totalProduct = cartItems.reduce((x, item) => x + item.quantity, 0);
+
   return (
     <div className="orders">
       <Row className="row">
@@ -11,31 +30,35 @@ const Order = () => {
           <form>
             <Row className="form__row" data-aos="fade-down">
               <Col md={6} lg={6} sm={12} xs={12}>
-                <input type="text" placeholder="First name" />
+                <input type="text" placeholder="First name" required />
               </Col>
               <Col md={6} lg={6} sm={12} xs={12}>
-                <input type="text" placeholder="Last name" />
+                <input type="text" placeholder="Last name" required />
               </Col>
               <Col md={6} lg={6} sm={12} xs={12}>
-                <input type="email" placeholder="Email address" />
+                <input type="email" placeholder="Email address" required />
               </Col>
               <Col md={6} lg={6} sm={12} xs={12}>
-                <input type="text" placeholder="Phone number" />
+                <input type="text" placeholder="Phone number" required />
               </Col>
               <Col md={12} lg={12} sm={12} xs={12}>
-                <input type="text" placeholder="Street address" />
+                <input type="text" placeholder="Street address" required />
               </Col>
               <Col md={6} lg={6} sm={12} xs={12}>
-                <input type="text" placeholder="Apartment, Suite, House no" />
+                <input
+                  type="text"
+                  placeholder="Apartment, Suite, House no"
+                  required
+                />
               </Col>
               <Col md={6} lg={6} sm={12} xs={12}>
-                <input type="text" placeholder="dropdown" />
+                <input type="text" placeholder="dropdown" required />
               </Col>
               <Col md={6} lg={6} sm={12} xs={12}>
-                <input type="text" placeholder="dropdown" />
+                <input type="text" placeholder="dropdown" required />
               </Col>
               <Col md={6} lg={6} sm={12} xs={12}>
-                <input type="text" placeholder="dropdown" />
+                <input type="text" placeholder="dropdown" required />
               </Col>
               <Col md={6} lg={6} sm={12} xs={12}>
                 <input type="password" placeholder="password no." />
@@ -95,7 +118,12 @@ const Order = () => {
             <h5>Coupon Code</h5>
             <input type="text" />
             <div className="btn">
-              <input type="submit" value="Apply Voucher" />
+              {coupon}
+              <input
+                onClick={couponHandler}
+                type="submit"
+                value="Apply Voucher"
+              />
             </div>
           </div>
 
@@ -104,18 +132,17 @@ const Order = () => {
             <h5>Product Cost</h5>
             <div className="total__cost">
               <div className="total__price">
-                <p>Resedence : </p>
-                <p> $ 100</p>
+                <p>Total Products : </p>
+                <p> {totalProduct}</p>
               </div>
               <div className="total__price">
-                <p>Flight : </p>
-                <p> $ 100</p>
+                <p>Product Cost : </p>
+                <p>$ {subTotal}</p>
               </div>
               <div className="total__price">
                 <p>Vat : </p>
                 <p>
-                  {' '}
-                  $ 100{' '}
+                  $ {vat}
                   <span style={{ fontSize: '14px', color: 'red' }}>
                     (tax is 8%)
                   </span>
@@ -123,14 +150,14 @@ const Order = () => {
               </div>
               <div className="total__price total">
                 <h6>Total Cost : </h6>
-                <h6> $ 1500</h6>
+                <h6>$ {finalTotal}</h6>
               </div>
             </div>
           </div>
-          {/* ____ */}
-          {/*________ Coupon ___________ */}
           <div className="place__order">
-            <input type="submit" value="Place Order" />
+            <Link to="/order-placed">
+              <input type="submit" value="Place Order" />
+            </Link>
           </div>
         </Col>
       </Row>
