@@ -9,13 +9,14 @@
   background-color: black;
   color: white;
   font-weight: 600;
+
   margin-top: 20px;
   transition: transform 700ms;
+  width: 150px !important;
 }
 .regi__btn:hover {
   background-color: rgb(0, 0, 0);
   transform: scale(1.04);
-  box-shadow: 0px 2px 7px 0px #00f0a8;
 }
 input {
   width: 100%;
@@ -37,14 +38,83 @@ p {
   margin: 5px !important;
 }
 .btn {
-  box-shadow: 0px 0px 0px 0px;
   font-weight: 600;
+  box-shadow: none;
+  transition: 500ms all;
 }
 .btn:hover {
   background-color: white !important;
   color: blue !important;
+  transform: scale(1.02) !important;
+  outline: none !important;
 }
 .inp__title {
   color: black;
   font-weight: 600;
+}
+
+// Register Page ___________
+.register__form {
+  width: 100%;
+  margin: auto;
+  background-color: #f3f6fd;
+  border-radius: 5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  input {
+    width: 100%;
+    border-radius: 5px;
+    height: 10px;
+    height: 43px !important;
+  }
+  .inside__form {
+    width: 80%;
+    margin: auto;
+    padding: 100px 50px;
+    background-color: #e9ecef;
+    border-radius: 10px !important;
+    .form {
+      width: 80%;
+      margin: auto;
+      background-color: white;
+      padding: 50px;
+    }
+    .regitel {
+      margin-bottom: 50px;
+    }
+    .regi__btn:hover {
+      transform: scale(1) !important;
+    }
+  }
+  .s__btn {
+    button {
+      width: 270px;
+      padding: 10px 0px;
+      margin: 10px;
+      transform: 500ms all;
+      border-radius: 5px;
+      background-color: rgb(146, 57, 6);
+      color: white;
+    }
+    svg {
+      font-size: 24px;
+    }
+    button:hover {
+      transform: scale(1.02) !important;
+      box-shadow: 0px 8px 6px -5px !important;
+    }
+  }
+}
+@media screen and (max-width: 856px) {
+  .inside__form {
+    width: 100% !important;
+  }
+  .form {
+    width: 100% !important;
+  }
+  .s_btn {
+    button {
+      width: 150px !important;
+    }
+  }
 }

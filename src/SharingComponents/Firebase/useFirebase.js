@@ -88,14 +88,17 @@ const useFirebase = () => {
     )
       .then((result) => {
         const signedUpUser = result.user;
-        setUser(signedUpUser);
         displayName();
-        setError('');
         emailVerification();
+
+        setUser(signedUpUser);
+        alert('Resistered Successfully');
+        setError('');
       })
       .catch((error) => {
         setError(error.message);
       });
+    e.target.reset();
   };
 
   // Login With email and password __________________________________________________
@@ -115,14 +118,14 @@ const useFirebase = () => {
       .catch((error) => {
         setError(error.message);
       });
+    e.target.reset();
   };
 
   // Verify Account  ________________________________________________________________
 
   const emailVerification = () => {
     sendEmailVerification(auth, emailRef.current.value).then((result) => {
-      // Email verification sent!
-      // ...
+      alert('check your email to verify account');
     });
   };
 

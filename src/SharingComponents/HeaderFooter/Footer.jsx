@@ -15,7 +15,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <div className="footer__container" data-aos="fade-down">
+      <div className="footer__container pt-5" data-aos="fade-down">
         <div>
           <Row className="row">
             <Col lg={3} md={6} sm={6} xs={12}>

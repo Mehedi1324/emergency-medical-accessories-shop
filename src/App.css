@@ -21,6 +21,9 @@ body {
   color: #616979 !important;
   scroll-behavior: smooth !important;
 }
+:focus {
+  outline: none !important;
+}
 div#root {
   overflow: hidden;
 }
