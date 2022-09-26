@@ -40,11 +40,15 @@ const Card = () => {
 
               <div className="quantity">
                 <FaMinus
-                  onClick={() => dispatch(addToCart(item, item.quantity - 1))}
+                  onClick={() => {
+                    dispatch(addToCart(item, item.quantity - 1));
+                  }}
                 />
                 <span>{item.quantity}</span>
                 <FaPlus
-                  onClick={() => dispatch(addToCart(item, item.quantity + 1))}
+                  onClick={() => {
+                    dispatch(addToCart(item, item.quantity + 1));
+                  }}
                 />
               </div>
               <div className="delete">

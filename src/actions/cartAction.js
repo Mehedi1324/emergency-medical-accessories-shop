@@ -3,7 +3,7 @@ export const addToCart = (product, quantity) => (dispatch, getState) => {
     name: product.name,
     image: product.image,
     price: product.price,
-    rating: product.rate,
+    rate: product.rate,
     quantity: Number(quantity),
   };
 
@@ -24,6 +24,14 @@ export const addToCart = (product, quantity) => (dispatch, getState) => {
 
 export const deleteFromCart = (product) => (dispatch, getState) => {
   dispatch({ type: 'DELETE_FROM_CART', payload: product });
+  localStorage.setItem(
+    'cartItems',
+    JSON.stringify(getState().cartReducer.cartItems)
+  );
+};
+
+export const removeAllItems = () => (dispatch, getState) => {
+  dispatch({ type: 'DELETE_ALL' });
   localStorage.setItem(
     'cartItems',
     JSON.stringify(getState().cartReducer.cartItems)

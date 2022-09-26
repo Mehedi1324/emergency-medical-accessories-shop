@@ -6,15 +6,22 @@ import '../Stylings/SingleItem.scss';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import Advertising from './Advertising';
 import Supports from './Supports';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../actions/cartAction';
 const SingleItem = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
   useEffect(() => {
-    const url = `http://localhost:1010/product/${id}`;
+    const url = `https://safe-oasis-53862.herokuapp.com/product/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
+  const handleAddToCart = () => {
+    dispatch(addToCart(product, quantity));
+  };
+  const dispatch = useDispatch();
   return (
     <div className="single__container">
       <div className="single__item">
@@ -51,14 +58,35 @@ const SingleItem = () => {
                 <p>blue</p>
               </div>
             </span>
-            <p>Quantity:</p>
             <div className="quantity">
-              <FaMinus />
-              <p>1</p>
-              <FaPlus />
+              <p>Total Product :</p>
+              <p> {quantity}</p>
+            </div>
+
+            <div className="quantity">
+              <FaMinus
+                onClick={() =>
+                  dispatch(
+                    addToCart(
+                      product,
+                      setQuantity(quantity > 1 && quantity - 1)
+                    )
+                  )
+                }
+              />
+              <p className="p-2"> {quantity} </p>
+              <FaPlus
+                onClick={() =>
+                  dispatch(addToCart(product, setQuantity(quantity + 1)))
+                }
+              />
             </div>
             <div className="card__btn">
-              <input type="submit" value="Add to cart" />
+              <input
+                onClick={handleAddToCart}
+                type="submit"
+                value="Add to cart"
+              />
               <Link to="/order">
                 <input type="submit" value="Check Order" />
               </Link>

@@ -1,8 +1,7 @@
 import React from 'react';
 import { FaStar, FaRegStar } from 'react-icons/fa';
-const Rating = (props) => {
-  const { rating } = props.item;
-
+const Rating = ({ item }) => {
+  const rating = item.rate;
   return (
     <div style={{ color: 'gold' }}>
       {rating > 0 ? <FaStar /> : <FaRegStar />}

@@ -30,9 +30,9 @@ function App() {
           <Route
             path="/order"
             element={
-              <PrivateRoute>
-                <Order />
-              </PrivateRoute>
+              // <PrivateRoute>
+              <Order />
+              //  </PrivateRoute>
             }
           />
           <Route path="*" element={<Error />} />

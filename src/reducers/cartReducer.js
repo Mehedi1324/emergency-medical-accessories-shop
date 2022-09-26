@@ -5,6 +5,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         (item) => item.name === action.payload.name
       );
       if (exists) {
+        console.log('the data is already there');
         return {
           ...state,
           cartItems: state.cartItems.map((item) =>
@@ -23,6 +24,11 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         cartItems: state.cartItems.filter(
           (item) => item.name !== action.payload.name
         ),
+      };
+    case 'DELETE_ALL':
+      return {
+        ...state,
+        cartItems: [],
       };
 
     default:
