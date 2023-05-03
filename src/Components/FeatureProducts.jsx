@@ -5,7 +5,7 @@ import FeProduct from './FeProduct';
 const FeatureProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('https://safe-oasis-53862.herokuapp.com/feature')
+    fetch('https://medikit-server.vercel.app/feature')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

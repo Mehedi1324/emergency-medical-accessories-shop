@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown';
 import '../Stylings/SingleItem.scss';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import Advertising from './Advertising';
@@ -12,12 +11,12 @@ const SingleItem = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
-  useEffect(() => {
-    const url = `https://safe-oasis-53862.herokuapp.com/product/${id}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
-  }, []);
+
+  const url = `https://medikit-server.vercel.app/product/${id}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => setProduct(data));
+
   const handleAddToCart = () => {
     dispatch(addToCart(product, quantity));
   };

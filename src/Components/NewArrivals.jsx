@@ -8,7 +8,7 @@ import '../Stylings/NewArrivals.scss';
 const NewArrivals = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('https://safe-oasis-53862.herokuapp.com/latest')
+    fetch('https://medikit-server.vercel.app/latest')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
