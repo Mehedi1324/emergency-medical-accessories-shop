@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../HeaderFooter/Header.scss';
 import { Offcanvas } from 'react-bootstrap';
 import {
@@ -14,7 +14,7 @@ import {
   FaUser,
 } from 'react-icons/fa';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Login from '../SIgn In/Login';
 import Register from '../SIgn In/Register';
 import { useAuth } from '../Hooks/AuthProvider';

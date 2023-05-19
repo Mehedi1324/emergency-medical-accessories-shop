@@ -1,5 +1,10 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom';
 import Home from './Components/Home';
 import Footer from './SharingComponents/HeaderFooter/Footer';
 import Header from './SharingComponents/HeaderFooter/Header';
@@ -10,10 +15,11 @@ import Error from './Components/Error';
 import Contact from './Components/Contact';
 import Card from './Components/Card';
 import Order from './Components/Order';
-import PrivateRoute from './Components/PrivateRoute';
+// import PrivateRoute from './Components/PrivateRoute';
 import Congratulation from './Components/Congratulation';
 import LoginPage from './SharingComponents/SIgn In/LoginPage';
 import RegisterPage from './SharingComponents/SIgn In/RegisterPage';
+
 function App() {
   return (
     <Router>

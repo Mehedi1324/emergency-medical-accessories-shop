@@ -12,7 +12,7 @@ const SingleItem = () => {
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
 
-  const url = `https://medikit-server.vercel.app/product/${id}`;
+  const url = `https://medi-kit.onrender.com/product/${id}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => setProduct(data));

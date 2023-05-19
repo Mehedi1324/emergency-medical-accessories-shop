@@ -43,7 +43,7 @@ const Order = () => {
       postal_code,
     };
     const buyerInfo = [result, ...cartItems];
-    fetch('http://localhost:1010/buyerinfo', {
+    fetch('https://medi-kit.onrender.com/buyerinfo', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
